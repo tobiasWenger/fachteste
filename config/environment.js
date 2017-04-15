@@ -20,6 +20,14 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    manifest: {
+      enabled: false,
+      appcacheFile: "/manifest.appcache",
+      excludePaths: ['index.html', 'manifest.ember-web-app.json'],
+      includePaths: ['/'],
+      showCreateDate: true
     }
   };
 
@@ -43,7 +51,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.manifest.enabled = true;
   }
 
   return ENV;

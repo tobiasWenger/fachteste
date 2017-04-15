@@ -1,0 +1,12 @@
+{{#main-toolbar}}
+	<h2>Einstellungen</h2>
+{{/main-toolbar}}
+
+{{#paper-content flex=true scroll-y=true class="layout-padding main-content"}}
+	<div class="layout-column">
+		<p>
+			Es {{#if (eq fts.length 1)}}ist 1 Fachtest{{else}}sind {{fts.length}} Fachteste{{/if}} gespeichert.
+		</p>
+		{{#paper-button class="flex" raised=true onClick=(action 'delete')}}Alle Daten Löschen{{/paper-button}}
+	</div>
+{{/paper-content}}

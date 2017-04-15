@@ -1,0 +1,8 @@
+{{#paper-card as |card|}}
+  {{#card.title as |title|}}
+    {{#title.text as |text|}}
+      {{#text.headline}}Total<span class="right">{{#if ft.mark}}{{to-precision ft.mark 3}}{{else}}-{{/if}}</span>{{/text.headline}}
+    {{/title.text}}
+  {{/card.title}}
+
+{{/paper-card}}

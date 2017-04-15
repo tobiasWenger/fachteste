@@ -7,6 +7,14 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('settings');
+  this.route('ftas');
+  this.route('ftks');
+  this.route('ftvs');
+  this.route('ftus');
+
+  this.route('ft', { path: '/ft/:ft_id' });
+  this.route('group', { path: '/group/:group_id' });
 });
 
 export default Router;

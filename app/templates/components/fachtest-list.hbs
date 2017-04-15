@@ -1,0 +1,32 @@
+{{#main-toolbar}}
+	<h2 class="flex center capitalize">FT {{type}}</h2>
+  {{#paper-button iconButton=true onClick=(action add)}}{{paper-icon 'add'}}{{/paper-button}}
+{{/main-toolbar}}
+
+{{#paper-content flex=true scroll-y=true class="layout-padding main-content"}}
+
+  {{#paper-list}}
+    {{#each fts as |ft|}}
+      {{#paper-item class="md-1-line" onClick=(transition-to 'ft' ft)}}
+        <p>
+          {{moment-format ft.date 'DD.MM.YYYY'}}
+          <span class="right">
+						{{#if ft.mark}}
+							{{to-precision ft.mark 3}}
+						{{else}}
+							-
+						{{/if}}
+					</span>
+        </p>
+      {{/paper-item}}
+		{{else}}
+			<p>Noch keine Daten vorhanden. Klicke oben rechts auf das Plus um ein Event zu erstellen.</p>
+    {{/each}}
+  {{/paper-list}}
+
+	{{#if fts}}
+		<div class="layout-row layout-align-end-center">
+			{{#paper-button onClick=(action delete)}}Alle Löschen{{/paper-button}}
+		</div>
+	{{/if}}
+{{/paper-content}}

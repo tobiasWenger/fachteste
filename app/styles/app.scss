@@ -1,0 +1,58 @@
+$primary: 'deep-orange';
+$accent: 'blue';
+
+@import 'ember-paper';
+
+$backgroundColor: color('grey', '50');
+
+@import '_defaultTheme';
+
+.main-content {
+	max-width: 600px;
+}
+
+.right {
+	float: right;
+}
+
+.fachtest-task-content {
+	text-align: center;
+}
+
+.slider-container {
+	.women {
+		margin-right: 30px;
+
+		i {
+			margin-right: 10px;
+		}
+	}
+
+	.men {
+		margin-left: 30px;
+
+		i {
+			margin-left: 10px;
+		}
+	}
+}
+
+.center {
+	text-align: center;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.spacer {
+	margin: 0 5px;
+}
+
+.increase-fat {
+	margin: 0 1px;
+}
+
+.text-align-left {
+	text-align: left;
+}

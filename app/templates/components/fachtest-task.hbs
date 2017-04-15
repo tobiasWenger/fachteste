@@ -1,0 +1,32 @@
+{{#paper-card as |card|}}
+  {{#card.title as |title|}}
+    {{#title.text as |text|}}
+      {{#text.headline}}
+        Aufgabe {{task.number}}
+        <span class="right">{{#if task.mark}}{{to-precision task.mark 3}}{{else}}-{{/if}}</span>
+      {{/text.headline}}
+    {{/title.text}}
+  {{/card.title}}
+
+  {{#card.content class="fachtest-task-content"}}
+
+    {{#if task.groups}}
+      <p>
+        <div class="layout-row">
+          <div class="flex-50"></div>
+          <div class="flex-25">Punkte</div>
+          <div class="flex-25">Note</div>
+        </div>
+      </p>
+    {{/if}}
+
+    {{#each task.groups as |group|}}
+      {{group-row group=group}}
+    {{/each}}
+
+    {{#card.actions}}
+      {{#paper-button onClick=(action addGroup task)}}Team Hinzufügen{{/paper-button}}
+    {{/card.actions}}
+  {{/card.content}}
+
+{{/paper-card}}

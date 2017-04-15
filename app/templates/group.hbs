@@ -1,0 +1,16 @@
+{{#paper-toolbar class="md-whiteframe-1dp page-main-toolbar" as |toolbar|}}
+  {{#toolbar.tools}}
+      {{#paper-button onClick=(transition-to 'ft' group.task.ft) iconButton=true}}
+        {{paper-icon "chevron-left"}}
+      {{/paper-button}}
+      <h2 class="flex center capitalize">Team</h2>
+      {{#paper-button iconButton=true onClick=(action 'delete')}}
+        {{paper-icon 'delete'}}
+      {{/paper-button}}
+  {{/toolbar.tools}}
+{{/paper-toolbar}}
+
+
+{{#paper-content flex=true scroll-y=true class="layout-padding main-content"}}
+  {{group-edit group=group}}
+{{/paper-content}}

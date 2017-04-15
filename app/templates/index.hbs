@@ -1,0 +1,20 @@
+{{#main-toolbar}}
+	<h2 class="flex center capitalize">Fachteste</h2>
+  {{#paper-button iconButton=true}}{{/paper-button}}
+{{/main-toolbar}}
+
+{{#paper-content flex=true scroll-y=true class="layout-padding main-content"}}
+
+
+	<div class="layout-column">
+
+		<p>Die Wertungstabellen gelten für 2017.</p>
+
+	  {{#paper-button class="flex" raised=true onClick=(transition-to "ftas")}}Allround{{/paper-button}}
+		{{#paper-button class="flex" raised=true onClick=(transition-to "ftks")}}Korbball{{/paper-button}}
+		{{#paper-button class="flex" raised=true onClick=(transition-to "ftvs")}}Volleyball{{/paper-button}}
+		{{#paper-button class="flex" raised=true onClick=(transition-to "ftus")}}Unihockey{{/paper-button}}
+
+	</div>
+
+{{/paper-content}}

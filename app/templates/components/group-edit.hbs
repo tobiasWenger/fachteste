@@ -1,0 +1,15 @@
+
+<h2>
+  Note: {{#if group.mark}}{{to-precision group.mark 3}}{{else}}-{{/if}}
+</h2>
+
+
+<div class="layout layout-align-center-center slider-container">
+  <span class="women">{{fa-icon 'female'}} {{group.women}}</span>
+  {{paper-slider class="flex md-primary" min=0 max=maxPeople value=group.men onChange=(action 'changeMen')}}
+  <span class="men">{{group.men}} {{fa-icon 'male'}}</span>
+</div>
+
+<p>
+  {{paper-input label="Punkte" type='tel' value=group.points onChange=(action (mut group.points)) autofocus=true}}
+</p>

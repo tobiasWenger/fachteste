@@ -1,0 +1,18 @@
+{{#paper-toolbar class="md-whiteframe-1dp page-main-toolbar" as |toolbar|}}
+  {{#toolbar.tools}}
+      {{#paper-button onClick=(transition-to parentRoute) iconButton=true}}
+        {{paper-icon "chevron-left"}}
+      {{/paper-button}}
+			<h2 class="flex center capitalize">FT {{ft.type}}</h2>
+		  {{#paper-button iconButton=true onClick=(action 'delete')}}{{paper-icon 'delete'}}{{/paper-button}}
+  {{/toolbar.tools}}
+{{/paper-toolbar}}
+
+
+{{#paper-content flex=true scroll-y=true class="layout-padding main-content"}}
+
+  {{fachtest-total ft=ft}}
+  {{fachtest-task task=ft.task1 addGroup=(action 'addGroup')}}
+  {{fachtest-task task=ft.task2 addGroup=(action 'addGroup')}}
+
+{{/paper-content}}

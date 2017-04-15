@@ -1,5 +1,47 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
 
-{{outlet}}
+{{#paper-sidenav-container class="site-nav-container"}}
+
+  {{#paper-sidenav
+    class="md-whiteframe-z2 primary"
+    lockedOpen="gt-sm"
+    open=isSidenavOpen
+    onToggle=(action (mut isSidenavOpen))}}
+
+    <div class="side-nav-wrapper">
+      <div>
+        {{#paper-toolbar class="md-whiteframe-1dp sidenav-toolbar layout-align-center-center"}}
+          <h2 class="side-nav-header">Fachteste</h2>
+        {{/paper-toolbar}}
+
+        {{#paper-list}}
+
+          {{#paper-item onClick=(transition-to 'ftas')}}
+            <p>FT Allround</p>
+          {{/paper-item}}
+
+          {{#paper-item onClick=(transition-to 'ftks')}}
+            <p>FT Korbball</p>
+          {{/paper-item}}
+
+          {{#paper-item onClick=(transition-to 'ftus')}}
+            <p>FT Unihockey</p>
+          {{/paper-item}}
+
+          {{#paper-item onClick=(transition-to 'ftvs')}}
+            <p>FT Volleyball</p>
+          {{/paper-item}}
+
+          {{#paper-item onClick=(transition-to 'settings')}}
+            <p>Einstellungen</p>
+          {{/paper-item}}
+
+        {{/paper-list}}
+      </div>
+    </div>
+  {{/paper-sidenav}}
+
+  <div class="flex layout-column main-content" tabindex="-1" role="main">
+    {{outlet}}
+  </div>
+
+{{/paper-sidenav-container}}
