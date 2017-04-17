@@ -1,25 +1,27 @@
-<p onclick={{transition-to 'group' group}}>
-  <div class="layout-row">
-    <div class="flex-50 text-align-left">
-      {{#each women as |woman|}}
-        {{fa-icon 'female'}}
-      {{/each}}
-      {{#if group.women}}
-        <span class="spacer"></span>
-      {{/if}}
-      {{#each men as |man|}}
-        {{fa-icon 'male' class="increase-fat"}}
-      {{/each}}
+<div class="layout-row">
+  {{#paper-button onClick=(transition-to 'group' group) class="flex"}}
+    <div class="layout-row">
+      <div class="flex-50">
+        {{#each women as |woman|}}
+          {{fa-icon 'female'}}
+        {{/each}}
+        {{#if (and group.women group.men)}}
+          <span class="spacer"></span>
+        {{/if}}
+        {{#each men as |man|}}
+          {{fa-icon 'male' class="increase-fat"}}
+        {{/each}}
+      </div>
+      <div class="flex-25">
+        {{group.points}}
+      </div>
+      <div class="flex-25">
+        {{#if group.mark}}
+          {{to-precision group.mark 3}}
+        {{else}}
+          -
+        {{/if}}
+      </div>
     </div>
-    <div class="flex-25">
-      {{group.points}}
-    </div>
-    <div class="flex-25">
-      {{#if group.mark}}
-        {{to-precision group.mark 3}}
-      {{else}}
-        -
-      {{/if}}
-    </div>
-  </div>
-</p>
+  {{/paper-button}}
+</div>

@@ -27,7 +27,13 @@ module.exports = function(environment) {
       appcacheFile: "/manifest.appcache",
       excludePaths: ['index.html', 'manifest.ember-web-app.json'],
       includePaths: ['/'],
-      showCreateDate: true
+      fallback: [
+          '/fonts/fontawesome-webfont.woff /fonts/fontawesome-webfont.woff',
+          '/fonts/fontawesome-webfont.eot /fonts/fontawesome-webfont.eot',
+          '/fonts/fontawesome-webfont.svg /fonts/fontawesome-webfont.svg',
+          '/fonts/fontawesome-webfont.ttf /fonts/fontawesome-webfont.ttf',
+          '/fonts/FontAwesome.otf /fonts/FontAwesome.otf'
+      ]
     }
   };
 

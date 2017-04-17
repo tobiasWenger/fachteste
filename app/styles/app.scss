@@ -5,11 +5,11 @@ $accent: 'blue';
 
 $backgroundColor: color('grey', '50');
 
-@import '_defaultTheme';
 
 .main-content {
 	max-width: 600px;
 }
+
 
 .right {
 	float: right;
@@ -55,4 +55,101 @@ $backgroundColor: color('grey', '50');
 
 .text-align-left {
 	text-align: left;
+}
+
+.group-header {
+	padding: 6px 14px;
+	margin-bottom: 6px;
+	font-weight: 700;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: color($color-grey, '500');
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.4;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: $backgroundColor;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+md-content.md-default-theme, md-content {
+  background-color: $backgroundColor;
+}
+
+.flex-start {
+  align-self: flex-start;
+}
+
+
+body.ember-application {
+  flex-direction: row;
+  flex: 1;
+  display: flex;
+}
+
+body > div.ember-view {
+  flex-direction: row;
+  flex: 1;
+  display: flex;
+}
+
+.site-nav-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.inner-sidenav {
+  position: relative;
+}
+
+
+md-toolbar.md-default-theme:not(.md-menu-toolbar) md-icon, md-toolbar:not(.md-menu-toolbar) md-icon {
+  color: $light-contrast-color;
+}
+
+
+md-toolbar.md-default-theme.page-main-toolbar {
+
+	color: $light-contrast-color;
+
+  .btn {
+    cursor: pointer;
+
+    &:hover {
+      color: color($accent, '500');
+    }
+  }
+
+}
+
+
+
+md-toolbar.md-default-theme.sidenav-toolbar {
+  background-color: color($accent, '500');
+  color: $dark-contrast-color;
+}
+
+
+md-input-container {
+  width: 100%;
+  box-sizing: border-box;
 }
