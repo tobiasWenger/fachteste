@@ -5,11 +5,11 @@
 
 
 <div class="layout layout-align-center-center slider-container">
-  <span class="women">{{fa-icon 'female'}} {{group.women}}</span>
+  <span class="women"><img class="icon" src='/female.png'> {{group.women}}</span>
   {{paper-slider class="flex md-primary" min=0 max=maxPeople value=group.men onChange=(action 'changeMen')}}
-  <span class="men">{{group.men}} {{fa-icon 'male'}}</span>
+  <span class="men">{{group.men}} <img class="icon" src='/male.png'></span>
 </div>
 
 <p>
-  {{paper-input label="Punkte" type='tel' value=group.points onChange=(action (mut group.points)) autofocus=true}}
+  {{paper-input label="Punkte" type='tel' value=group.points onChange=(action (mut group.points))}}
 </p>

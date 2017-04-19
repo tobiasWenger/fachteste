@@ -25,15 +25,8 @@ module.exports = function(environment) {
     manifest: {
       enabled: false,
       appcacheFile: "/manifest.appcache",
-      excludePaths: ['index.html', 'manifest.ember-web-app.json'],
-      includePaths: ['/'],
-      fallback: [
-          '/fonts/fontawesome-webfont.woff /fonts/fontawesome-webfont.woff',
-          '/fonts/fontawesome-webfont.eot /fonts/fontawesome-webfont.eot',
-          '/fonts/fontawesome-webfont.svg /fonts/fontawesome-webfont.svg',
-          '/fonts/fontawesome-webfont.ttf /fonts/fontawesome-webfont.ttf',
-          '/fonts/FontAwesome.otf /fonts/FontAwesome.otf'
-      ]
+      excludePaths: ['index.html', 'manifest.ember-web-app.json', 'icons/*'],
+      includePaths: ['/']
     }
   };
 

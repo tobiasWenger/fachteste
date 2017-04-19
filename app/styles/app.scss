@@ -20,10 +20,11 @@ $backgroundColor: color('grey', '50');
 }
 
 .slider-container {
+
 	.women {
 		margin-right: 30px;
 
-		i {
+		.icon {
 			margin-right: 10px;
 		}
 	}
@@ -31,7 +32,7 @@ $backgroundColor: color('grey', '50');
 	.men {
 		margin-left: 30px;
 
-		i {
+		.icon {
 			margin-left: 10px;
 		}
 	}
@@ -152,4 +153,9 @@ md-toolbar.md-default-theme.sidenav-toolbar {
 md-input-container {
   width: 100%;
   box-sizing: border-box;
+}
+
+.icon {
+	height: 14px;
+	width: 14px;
 }

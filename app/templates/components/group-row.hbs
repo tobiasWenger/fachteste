@@ -1,15 +1,15 @@
 <div class="layout-row">
   {{#paper-button onClick=(transition-to 'group' group) class="flex"}}
     <div class="layout-row">
-      <div class="flex-50">
+      <div class="flex-50 layout-row layout-align-center-center">
         {{#each women as |woman|}}
-          {{fa-icon 'female'}}
+          <img class="icon" src="/female.png">
         {{/each}}
         {{#if (and group.women group.men)}}
           <span class="spacer"></span>
         {{/if}}
         {{#each men as |man|}}
-          {{fa-icon 'male' class="increase-fat"}}
+          <img class="icon" src="/male.png">
         {{/each}}
       </div>
       <div class="flex-25">
