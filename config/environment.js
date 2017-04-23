@@ -25,7 +25,7 @@ module.exports = function(environment) {
     manifest: {
       enabled: false,
       appcacheFile: "/manifest.appcache",
-      excludePaths: ['index.html', 'manifest.ember-web-app.json', 'icons/*'],
+      excludePaths: ['index.html', 'manifest.ember-web-app.json', 'app-icons/*'],
       includePaths: ['/']
     }
   };
