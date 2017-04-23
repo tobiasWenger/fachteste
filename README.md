@@ -1,6 +1,6 @@
 # Fachteste
 
-App um die STV Fachteste zu berechnen.
+App um die STV Fachteste zu berechnen. [http://fachteste.tvlommiswil.ch](http://fachteste.tvlommiswil.ch)
 
 ## Prerequisites
 
