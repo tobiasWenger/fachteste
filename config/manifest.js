@@ -6,9 +6,9 @@ module.exports = function(/* environment, appConfig */) {
   // supported properties
 
   return {
-    name: "Fachteste",
-    short_name: "Fachteste",
-    description: "App um die Noten von den STV Fachteste zu berechnen.",
+    name: "Wertungstabellen",
+    short_name: "Wertungstabellen",
+    description: "App um die Noten von den STV Fachteste und PS 80m zu berechnen.",
     start_url: "/",
     display: "standalone",
     background_color: "#fff",
