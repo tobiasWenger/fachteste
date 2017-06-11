@@ -10,7 +10,7 @@
     <div class="side-nav-wrapper">
       <div>
         {{#paper-toolbar class="md-whiteframe-1dp sidenav-toolbar layout-align-center-center"}}
-          <h2 class="side-nav-header">Fachteste</h2>
+          <h2 class="side-nav-header">Wertungstabellen</h2>
         {{/paper-toolbar}}
 
         {{#paper-list}}
@@ -29,6 +29,10 @@
 
           {{#paper-item onClick=(transition-to 'ftvs')}}
             <p>FT Volleyball</p>
+          {{/paper-item}}
+
+          {{#paper-item onClick=(transition-to 'ps80')}}
+            <p>PS 80m</p>
           {{/paper-item}}
 
           {{#paper-item onClick=(transition-to 'settings')}}

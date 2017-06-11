@@ -1,0 +1,28 @@
+{{#main-toolbar}}
+	<h2 class="flex center capitalize">PS 80m</h2>
+{{/main-toolbar}}
+
+{{#paper-content flex=true scroll-y=true class="layout-padding main-content layout-column"}}
+
+
+  <h2 class="flex-100">
+    Note: {{#if mark}}{{to-precision mark 3}}{{else}}-{{/if}}
+  </h2>
+
+  {{paper-input label="Männer" value=men onChange=(action (mut men))}}
+  {{paper-input label="Frauen" value=women onChange=(action (mut women))}}
+  {{paper-input label="Zeit (s)" value=time onChange=(action (mut time))}}
+
+
+    {{#paper-select
+      label="Untergrund"
+      options=trackTypes
+      selected=trackType
+      onChange=(action (mut trackType))
+      as |trackType|}}
+      {{trackType}}
+    {{/paper-select}}
+
+
+
+{{/paper-content}}

@@ -15,6 +15,7 @@ Router.map(function() {
 
   this.route('ft', { path: '/ft/:ft_id' });
   this.route('group', { path: '/group/:group_id' });
+  this.route('ps80');
 });
 
 export default Router;
