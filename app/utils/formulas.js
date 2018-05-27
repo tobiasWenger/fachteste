@@ -41,19 +41,19 @@ export default {
 
   korbball: {
     task1: (female, male, points) => {
-      const f1 = 31;
-      const f2 = 9.6;
-      const m1 = 30;
-      const m2 = 10.4;
+      const f1 = 13;
+      const f2 = 8;
+      const m1 = 17;
+      const m2 = 9.7;
 
       return generic(female, male, points, f1, f2, m1, m2);
     },
 
     task2: (female, male, points) => {
-      const f1 = -41;
-      const f2 = 9.4;
-      const m1 = -11;
-      const m2 = 16.4;
+      const f1 = -44;
+      const f2 = 9.3;
+      const m1 = -24;
+      const m2 = 15.3;
 
       return generic(female, male, points, f1, f2, m1, m2);
     }
